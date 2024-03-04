@@ -5,7 +5,7 @@
 
 int main() {
     // Read the image
-    cv::Mat image = cv::imread("7.png", cv::IMREAD_GRAYSCALE);
+    cv::Mat image = cv::imread("testImages/1.jpg", cv::IMREAD_GRAYSCALE);
 
     // Check for invalid input
     if (image.empty()) {
