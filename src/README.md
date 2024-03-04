@@ -4,4 +4,4 @@ To Complie the code use this command in linux terminal
 
 To run the code after compilation use the below command
 
-    main
+    ./main
