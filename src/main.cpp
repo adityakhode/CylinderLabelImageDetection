@@ -5,14 +5,14 @@
 
 int main() {
     // Read the image
-    cv::Mat image = cv::imread("testImages/1.jpg", cv::IMREAD_GRAYSCALE);
+    cv::Mat image = cv::imread("../testImages/1.jpg", cv::IMREAD_GRAYSCALE);
 
     // Check for invalid input
     if (image.empty()) {
         std::cout << "Could not open or find the image" << std::endl;
         return -1;
     }
-    cv::imwrite("processed_D-21_D-21.png", image);
+    cv::imwrite("Result_Img.jpg", image);
 
 
 
@@ -21,7 +21,7 @@ int main() {
     tess.Init(NULL, "eng", tesseract::OEM_LSTM_ONLY);
 
     // Load image using Leptonica
-    Pix* pixImage = pixRead("processed_D-21_D-21.png");
+    Pix* pixImage = pixRead("Result_Img.jpg");
 
     // Set image for OCR
     tess.SetImage(pixImage);
